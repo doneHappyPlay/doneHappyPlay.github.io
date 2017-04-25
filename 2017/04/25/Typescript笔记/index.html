@@ -6,17 +6,39 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2017 | 前端小海</title>
+  <title>Typescript笔记 | 前端小海</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="去留无意，闲看庭前花开花落；宠辱不惊，漫随天外云卷云舒。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="前端小海">
-<meta property="og:url" content="http://yoursite.com/archives/2017/index.html">
+  <meta name="description" content="字符串属性多行字符串`hello 
+  world
+ `
+字符串模板var myname = &amp;quot;dhp&amp;quot;;
+var template = `&amp;lt;div&amp;gt;
+                  &amp;lt;span&amp;gt;${myname}&amp;lt;/span&amp;gt;
+                &amp;lt;/div&amp;gt;`;
+自动拆分字符串function test(tem">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Typescript笔记">
+<meta property="og:url" content="http://yoursite.com/2017/04/25/Typescript笔记/index.html">
 <meta property="og:site_name" content="前端小海">
-<meta property="og:description" content="去留无意，闲看庭前花开花落；宠辱不惊，漫随天外云卷云舒。">
+<meta property="og:description" content="字符串属性多行字符串`hello 
+  world
+ `
+字符串模板var myname = &amp;quot;dhp&amp;quot;;
+var template = `&amp;lt;div&amp;gt;
+                  &amp;lt;span&amp;gt;${myname}&amp;lt;/span&amp;gt;
+                &amp;lt;/div&amp;gt;`;
+自动拆分字符串function test(tem">
+<meta property="og:updated_time" content="2017-04-25T00:17:11.333Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="前端小海">
-<meta name="twitter:description" content="去留无意，闲看庭前花开花落；宠辱不惊，漫随天外云卷云舒。">
+<meta name="twitter:title" content="Typescript笔记">
+<meta name="twitter:description" content="字符串属性多行字符串`hello 
+  world
+ `
+字符串模板var myname = &amp;quot;dhp&amp;quot;;
+var template = `&amp;lt;div&amp;gt;
+                  &amp;lt;span&amp;gt;${myname}&amp;lt;/span&amp;gt;
+                &amp;lt;/div&amp;gt;`;
+自动拆分字符串function test(tem">
   
     <link rel="alternative" href="/atom.xml" title="前端小海" type="application/atom+xml">
   
@@ -168,130 +190,282 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-Typescript笔记" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      Typescript笔记
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/25/Typescript笔记/" class="archive-article-date">
+
+        
+        <a href="/2017/04/25/Typescript笔记/" class="archive-article-date">
   	<time datetime="2017-04-25T00:14:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-25</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/25/Typescript笔记/">Typescript笔记</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="字符串属性"><a href="#字符串属性" class="headerlink" title="字符串属性"></a>字符串属性</h2><h3 id="多行字符串"><a href="#多行字符串" class="headerlink" title="多行字符串"></a>多行字符串</h3><pre><code>`hello 
+  world
+ `
+</code></pre><h3 id="字符串模板"><a href="#字符串模板" class="headerlink" title="字符串模板"></a>字符串模板</h3><pre><code>var myname = &quot;dhp&quot;;
+var template = `&lt;div&gt;
+                  &lt;span&gt;${myname}&lt;/span&gt;
+                &lt;/div&gt;`;
+</code></pre><h3 id="自动拆分字符串"><a href="#自动拆分字符串" class="headerlink" title="自动拆分字符串"></a>自动拆分字符串</h3><pre><code>function test(template,name,age){
+   console.log(template);
+   console.log(name);
+   console.log(age);
+}
+var myname = &quot;hypin&quot;;
+var getAga = function(){
+   return 18;
+}
+test `hello my name is ${myname},i&apos;m ${getAge()}`
+</code></pre><h2 id="参数新特性"><a href="#参数新特性" class="headerlink" title="参数新特性"></a>参数新特性</h2><h3 id="参数的类型"><a href="#参数的类型" class="headerlink" title="参数的类型"></a>参数的类型</h3><pre><code>var myname: string = &quot;hypin&quot;;
+myname = 13;   //编译器会报错
 
-        <div class="article-info info-on-right">
-          
-          
+var alias: any = &quot;xixi&quot;;   //任意类型
+alias = 13;    //不会报错
 
+var age:number = 13;
+
+var man:boolean = true;
+
+function test():void{
+  return &quot;&quot;;   //报错
+}
+
+function test(name:string) :string{
+  return &quot;&quot;;
+}
+
+class Person {
+  name: string;
+  age:number;
+}
+
+var zhangsan: Person = new Person();
+zhangsan.name = &quot;zhangsan&quot;;
+zhangsan.age = 18;
+</code></pre><h3 id="参数的默认值"><a href="#参数的默认值" class="headerlink" title="参数的默认值"></a>参数的默认值</h3><pre><code>var myname:string = &quot;hypin&quot;;
+function test(a:string,b:string,c:string = &quot;jojo&quot;){
+  console.log(a);
+  console.log(b);
+  console.log(c);
+}
+test(&quot;xxx&quot;,&quot;yyy&quot;,&quot;zzz&quot;);
+test(&quot;xxx&quot;,&quot;yyy&quot;);
+注意:带默认值的参数放在最后面
+</code></pre><h3 id="TypeScript-可选参数"><a href="#TypeScript-可选参数" class="headerlink" title="TypeScript-可选参数"></a>TypeScript-可选参数</h3><pre><code> function test(a:string,b?:string,c:string = &quot;jojo&quot;){
+  console.log(a);
+  console.log(b);
+  console.log(c);
+}
+test(&quot;xxx&quot;);   // xxx undefined  jojo
+注意：可选参数要放在必选参数的后面
+</code></pre><h2 id="函数新特性："><a href="#函数新特性：" class="headerlink" title="函数新特性："></a>函数新特性：</h2><h3 id="Rest-and-spread-操作符"><a href="#Rest-and-spread-操作符" class="headerlink" title="Rest and spread 操作符"></a>Rest and spread 操作符</h3><pre><code>可以传任意数量的参数
+function fun1(...args){
+  args.forEach(function(){
+     console.log(arg);
+  })
+}
+fun1(1,2,3);  //1,2,3
+fun1(7,8,9,10,11);  //7,8,9,10,11
+
+
+任意长度的参数数组转化为固定长度
+function fun1(a,b,c){
+  console.log(a);
+  console.log(b);
+  console.log(c);
+}
+var args = [1,2];
+func1(...args);   //1 2 underfined
+
+var args = [7,8,9,10,11];
+fun1(...args2);   //7 8 9
+</code></pre><h3 id="generator函数"><a href="#generator函数" class="headerlink" title="generator函数"></a>generator函数</h3><p>  控制函数的执行过程，手工暂停和恢复代码执行<br>     声明generator函数<br>     function* doSomething(){<br>       console.log(“start”);<br>       yield;<br>       console.log(“finish”);<br>     }<br>     var funv1 = doSomething();<br>     func1.next();   //start<br>     func1.next();   //finish</p>
+<pre><code>function*getStockPrice(stock){
+  while(true){
+    yield Math.random()*100;
+  }
+}
+var priceGenerator = getStockPrice(&quot;IBM&quot;);
+
+var limitPrice = 15;
+
+while(price &gt; limitPrice){
+   price = priceGGenerator.next().value;
+   console.log(`the generator return ${price}`);
+}
+console.log(`buying at ${price}`);
+</code></pre><h3 id="析构表达式"><a href="#析构表达式" class="headerlink" title="析构表达式"></a>析构表达式</h3><p>  destruturing析构表达式:通过表达式将对象或数组拆解成任意数量的变<br>从对象里拆解变量<br>     function getStock(){<br>       return {<br>         code:”IBM”,<br>         price:{<br>           price1:200,<br>           price2:400<br>         },<br>         aaa:”xxx”,<br>         bbb:”haha”<br>       }<br>     }<br>     //js<br>     var stock = getStock();<br>     var code = stock.code;<br>     var price = stock.price;<br>     //ts<br>     var {code:codex,price: {price2}} = getStock();<br>     console.log(codex);   //IBM<br>     console.log(price2);   //400<br>从数组里拆解变量<br>     var array = [1,2,3,4];<br>     var [number1,number2,…others] = array1;<br>     console.log(number1);   1<br>     console.log(number2);   2<br>     console.log(others);  // [3,4]</p>
+<pre><code>function doSomething([number1,number2,...others]){
+   console.log(number1);   
+   console.log(number2);   
+   console.log(others);  
+}
+doSomething(array1);
+</code></pre><p>析构表达式好处:初始本地变量的时候，减少代码量</p>
+<h3 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h3><p> 用来声明匿名函数，消除传统匿名函数的this指针问题<br>     var sum = (arg1,arg2) =&gt; arg1 +arg2;</p>
+<pre><code>var myArray = [1,2,3,4,5];
+console.log(myArray.filter(value =&gt; value%2 ==0));
+
+js  es5
+function getStock(name:string){
+  this.name = name;
+  setInterval(function(){
+    console.log(&quot;name is :&quot; + this.name);
+  },1000)
+}
+var stock = new getStock(&quot;IBM&quot;);  // &quot;name is :&quot;
+
+js es6
+function getStock(name:string){
+  this.name = name;
+  setInterval(() =&gt;{
+    console.log(&quot;name is :&quot; + this.name);
+  },1000)
+}
+var stock = new getStock(&quot;IBM&quot;);  // &quot;name is : IBM&quot;
+</code></pre><h3 id="for-of-循环"><a href="#for-of-循环" class="headerlink" title="for of 循环"></a>for of 循环</h3><pre><code>var myArray = [1,2,3,4];
+myArray.desc = &quot;four number&quot;;
+</code></pre><p>forEach()<br>     myArray.forEach(value =&gt; console.log(value)); // 1 2 3 4<br>特性:忽略数组的属性值，不能使用break关键字<br>for in<br>     for(var n in myArray){<br>       console.log(myArray[n]);  // 1 2 3 4 four number<br>     }<br>特性:遍历对象的属性的键值对键的名字<br>for of<br>     for(var n of myArray){<br>       if(n&gt;2) break;<br>       console.log(n);  // 1 2<br>     }<br>特性:忽略属性  循环可以被打断 </p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢支持<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/04/25/Typescript笔记/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/18/正则表达式-1/" class="archive-article-date">
-  	<time datetime="2017-04-17T22:45:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-18</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/18/正则表达式-1/">正则表达式;</a>
-    </h1>
+  
+    <a href="/2017/04/18/正则表达式-1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">正则表达式;</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="Typescript笔记" data-title="Typescript笔记" data-url="http://yoursite.com/2017/04/25/Typescript笔记/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
   
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/23/article-title/" class="archive-article-date">
-  	<time datetime="2017-03-23T14:58:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/23/article-title/">article title</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/23/hello-world/" class="archive-article-date">
-  	<time datetime="2017-03-23T05:05:31.241Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/23/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -321,8 +495,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
