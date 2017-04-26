@@ -6,17 +6,39 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2017 | 前端小海</title>
+  <title>Typescript笔记2 | 前端小海</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="去留无意，闲看庭前花开花落；宠辱不惊，漫随天外云卷云舒。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="前端小海">
-<meta property="og:url" content="http://yoursite.com/archives/2017/index.html">
+  <meta name="description" content="面向对象特性类(class)类是TypeScript的核心，使用Typescript开发时，大部分代码都写在类里面的。这里会介绍类的定义，构造函数，以及类的继承
+类的定义class Person{
+   public name;
+   public eat(){
+    console.log(&amp;quot;im eating&amp;quot;);
+  }
+}
+var p1 = new Person();">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Typescript笔记2">
+<meta property="og:url" content="http://yoursite.com/2017/04/26/Typescript笔记2/index.html">
 <meta property="og:site_name" content="前端小海">
-<meta property="og:description" content="去留无意，闲看庭前花开花落；宠辱不惊，漫随天外云卷云舒。">
+<meta property="og:description" content="面向对象特性类(class)类是TypeScript的核心，使用Typescript开发时，大部分代码都写在类里面的。这里会介绍类的定义，构造函数，以及类的继承
+类的定义class Person{
+   public name;
+   public eat(){
+    console.log(&amp;quot;im eating&amp;quot;);
+  }
+}
+var p1 = new Person();">
+<meta property="og:updated_time" content="2017-04-26T00:09:11.408Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="前端小海">
-<meta name="twitter:description" content="去留无意，闲看庭前花开花落；宠辱不惊，漫随天外云卷云舒。">
+<meta name="twitter:title" content="Typescript笔记2">
+<meta name="twitter:description" content="面向对象特性类(class)类是TypeScript的核心，使用Typescript开发时，大部分代码都写在类里面的。这里会介绍类的定义，构造函数，以及类的继承
+类的定义class Person{
+   public name;
+   public eat(){
+    console.log(&amp;quot;im eating&amp;quot;);
+  }
+}
+var p1 = new Person();">
   
     <link rel="alternative" href="/atom.xml" title="前端小海" type="application/atom+xml">
   
@@ -168,157 +190,272 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-Typescript笔记2" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      Typescript笔记2
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/26/Typescript笔记2/" class="archive-article-date">
+
+        
+        <a href="/2017/04/26/Typescript笔记2/" class="archive-article-date">
   	<time datetime="2017-04-26T00:08:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-26</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/26/Typescript笔记2/">Typescript笔记2</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="面向对象特性"><a href="#面向对象特性" class="headerlink" title="面向对象特性"></a>面向对象特性</h2><h3 id="类-class"><a href="#类-class" class="headerlink" title="类(class)"></a>类(class)</h3><p>类是TypeScript的核心，使用Typescript开发时，大部分代码都写在类里面的。<br>这里会介绍类的定义，构造函数，以及类的继承</p>
+<h4 id="类的定义"><a href="#类的定义" class="headerlink" title="类的定义"></a>类的定义</h4><pre><code>class Person{
+   public name;
+   public eat(){
+    console.log(&quot;im eating&quot;);
+  }
+}
+var p1 = new Person();
+p1.name = &quot;batman&quot;;
+p1.eat();
 
-        <div class="article-info info-on-right">
-          
-          
+var p2 = new Person();
+p2.name = &quot;superman&quot;;
+p2.eat();
+</code></pre><h4 id="类的访问控制符"><a href="#类的访问控制符" class="headerlink" title="类的访问控制符"></a>类的访问控制符</h4><ul>
+<li>public   公有的  在类的内部外部可以访问  默认值</li>
+<li>private  私有的  在类的内部可以访问</li>
+<li><p>protected  受保护的  在类的内部和子类可以访问到</p>
+<h4 id="类的构造函数"><a href="#类的构造函数" class="headerlink" title="类的构造函数"></a>类的构造函数</h4><p>  class Person{</p>
+<pre><code>constructor(public name:string){
 
+}
+eat(){
+  console.log(this.name);
+}
+</code></pre><p>  }<br>  var p1 = new Person(“batman”);<br>  p1.eat();    //batman<br>在构造函数里面加入public才是声明name属性，eat方法才能调用</p>
+<h4 id="类的继承"><a href="#类的继承" class="headerlink" title="类的继承"></a>类的继承</h4><p>extends super</p>
+<p>   class Person{</p>
+<pre><code>constructor(public name:string){
+  console.log(&quot;haha&quot;);
+}
+eat(){
+  console.log(&quot;i&apos;m eating&quot;);
+}
+</code></pre><p>   }<br>   class Employee extends Person{</p>
+<pre><code>constructor(name:string,code:string){
+  super(name);
+  console.log(&quot;xixi&quot;);
+  this.code = code;
+}
+code:string;
+work(){
+  super.eat();
+  this.dowork()
+}
+private doWork(){
+  console.log(&quot;i&apos;m working&quot;);
+}
+</code></pre><p>   }<br>   var e1 = new Employee(“name”,”1”);<br>   e1.work();</p>
+<h3 id="泛型-generic"><a href="#泛型-generic" class="headerlink" title="泛型(generic)"></a>泛型(generic)</h3><p>参数化的类型，一般用来限制集合的内容 </p>
+<pre><code>person同上例一样
+var works: Array&lt;Person&gt; = [];
+workers[0] = new Person(&quot;zhangsan&quot;);
+workers[1] = new Employee(&quot;lisi&quot;,2);
+worker[2] = 2;   // 报错，类型不符合
+</code></pre><h3 id="接口-Interface"><a href="#接口-Interface" class="headerlink" title="接口(Interface)"></a>接口(Interface)</h3><p>用来建立某种代码约定，使得其他开发者在调用某个方法或创建新的类时必须遵循接口所定义的代码约定</p>
+<pre><code>一.接口声明属性
+interface IPerson {
+  name:string;
+  age:number;
+}
+class Person{
+  constructor(public config:IPerson){
+
+  }
+}
+var p1 = new Person({
+  name:&quot;zhangsan&quot;,
+  age:18
+});
+二.接口声明方法
+interface Animal{
+  eat();
+}
+class sheep implements Animal{
+  eat(){
+    console.log(&quot;I eat grass&quot;);
+  }
+}
+class Tiger implements Animal{
+  eat(){
+    console.log(&quot;I eat meat&quot;);
+  }
+}
+</code></pre><h3 id="模块-Module"><a href="#模块-Module" class="headerlink" title="模块(Module)"></a>模块(Module)</h3><p>模块可以帮助开发者将代码分割为可重用的单元。开发者可以自己决定将模块中的哪些资源(类，方法，变量)暴露出去供外部使用，哪些资源只有模块内使用</p>
+<pre><code>//a.ts
+export var prop1;
+var prop2;
+export function func1(){
+
+}
+function func2(){
+
+}
+//暴露类
+export class Clazz1{
+
+}
+//不暴露
+class Clazz2{
+
+}
+
+//b.ts
+import {prop1,func1,Clazz1} from &quot;./a&quot;;
+console.log(prop1);
+func1();
+new Clazz1{
+
+}
+export function func3{
+
+}
+</code></pre><h3 id="注解-annotation"><a href="#注解-annotation" class="headerlink" title="注解(annotation)"></a>注解(annotation)</h3><p>注解为程序的元素(类，方法，变量)加上更直观更明了的说明，这些说明信息与程序的业务逻辑无关，而是供指定的工具或框架使用的</p>
+<h3 id="类型定义文件-d-ts"><a href="#类型定义文件-d-ts" class="headerlink" title="类型定义文件(*.d.ts)"></a>类型定义文件(*.d.ts)</h3><p>类型定义文件用来帮助开发者在Typescript中使用已有的javascript的工具包，如jquery</p>
+</li>
+</ul>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢支持<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/04/26/Typescript笔记2/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/25/Typescript笔记/" class="archive-article-date">
-  	<time datetime="2017-04-25T00:14:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-25</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/25/Typescript笔记/">Typescript笔记</a>
-    </h1>
+  
+    <a href="/2017/04/25/Typescript笔记/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Typescript笔记</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="Typescript笔记2" data-title="Typescript笔记2" data-url="http://yoursite.com/2017/04/26/Typescript笔记2/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
   
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/18/正则表达式-1/" class="archive-article-date">
-  	<time datetime="2017-04-17T22:45:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/18/正则表达式-1/">正则表达式;</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/23/article-title/" class="archive-article-date">
-  	<time datetime="2017-03-23T14:58:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/23/article-title/">article title</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/23/hello-world/" class="archive-article-date">
-  	<time datetime="2017-03-23T05:05:31.241Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/23/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -348,8 +485,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

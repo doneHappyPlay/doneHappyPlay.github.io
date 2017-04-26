@@ -170,6 +170,173 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Typescript笔记2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/26/Typescript笔记2/">Typescript笔记2</a>
+    </h1>
+  
+
+        
+        <a href="/2017/04/26/Typescript笔记2/" class="archive-article-date">
+  	<time datetime="2017-04-26T00:08:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="面向对象特性"><a href="#面向对象特性" class="headerlink" title="面向对象特性"></a>面向对象特性</h2><h3 id="类-class"><a href="#类-class" class="headerlink" title="类(class)"></a>类(class)</h3><p>类是TypeScript的核心，使用Typescript开发时，大部分代码都写在类里面的。<br>这里会介绍类的定义，构造函数，以及类的继承</p>
+<h4 id="类的定义"><a href="#类的定义" class="headerlink" title="类的定义"></a>类的定义</h4><pre><code>class Person{
+   public name;
+   public eat(){
+    console.log(&quot;im eating&quot;);
+  }
+}
+var p1 = new Person();
+p1.name = &quot;batman&quot;;
+p1.eat();
+
+var p2 = new Person();
+p2.name = &quot;superman&quot;;
+p2.eat();
+</code></pre><h4 id="类的访问控制符"><a href="#类的访问控制符" class="headerlink" title="类的访问控制符"></a>类的访问控制符</h4><ul>
+<li>public   公有的  在类的内部外部可以访问  默认值</li>
+<li>private  私有的  在类的内部可以访问</li>
+<li><p>protected  受保护的  在类的内部和子类可以访问到</p>
+<h4 id="类的构造函数"><a href="#类的构造函数" class="headerlink" title="类的构造函数"></a>类的构造函数</h4><p>  class Person{</p>
+<pre><code>constructor(public name:string){
+
+}
+eat(){
+  console.log(this.name);
+}
+</code></pre><p>  }<br>  var p1 = new Person(“batman”);<br>  p1.eat();    //batman<br>在构造函数里面加入public才是声明name属性，eat方法才能调用</p>
+<h4 id="类的继承"><a href="#类的继承" class="headerlink" title="类的继承"></a>类的继承</h4><p>extends super</p>
+<p>   class Person{</p>
+<pre><code>constructor(public name:string){
+  console.log(&quot;haha&quot;);
+}
+eat(){
+  console.log(&quot;i&apos;m eating&quot;);
+}
+</code></pre><p>   }<br>   class Employee extends Person{</p>
+<pre><code>constructor(name:string,code:string){
+  super(name);
+  console.log(&quot;xixi&quot;);
+  this.code = code;
+}
+code:string;
+work(){
+  super.eat();
+  this.dowork()
+}
+private doWork(){
+  console.log(&quot;i&apos;m working&quot;);
+}
+</code></pre><p>   }<br>   var e1 = new Employee(“name”,”1”);<br>   e1.work();</p>
+<h3 id="泛型-generic"><a href="#泛型-generic" class="headerlink" title="泛型(generic)"></a>泛型(generic)</h3><p>参数化的类型，一般用来限制集合的内容 </p>
+<pre><code>person同上例一样
+var works: Array&lt;Person&gt; = [];
+workers[0] = new Person(&quot;zhangsan&quot;);
+workers[1] = new Employee(&quot;lisi&quot;,2);
+worker[2] = 2;   // 报错，类型不符合
+</code></pre><h3 id="接口-Interface"><a href="#接口-Interface" class="headerlink" title="接口(Interface)"></a>接口(Interface)</h3><p>用来建立某种代码约定，使得其他开发者在调用某个方法或创建新的类时必须遵循接口所定义的代码约定</p>
+<pre><code>一.接口声明属性
+interface IPerson {
+  name:string;
+  age:number;
+}
+class Person{
+  constructor(public config:IPerson){
+
+  }
+}
+var p1 = new Person({
+  name:&quot;zhangsan&quot;,
+  age:18
+});
+二.接口声明方法
+interface Animal{
+  eat();
+}
+class sheep implements Animal{
+  eat(){
+    console.log(&quot;I eat grass&quot;);
+  }
+}
+class Tiger implements Animal{
+  eat(){
+    console.log(&quot;I eat meat&quot;);
+  }
+}
+</code></pre><h3 id="模块-Module"><a href="#模块-Module" class="headerlink" title="模块(Module)"></a>模块(Module)</h3><p>模块可以帮助开发者将代码分割为可重用的单元。开发者可以自己决定将模块中的哪些资源(类，方法，变量)暴露出去供外部使用，哪些资源只有模块内使用</p>
+<pre><code>//a.ts
+export var prop1;
+var prop2;
+export function func1(){
+
+}
+function func2(){
+
+}
+//暴露类
+export class Clazz1{
+
+}
+//不暴露
+class Clazz2{
+
+}
+
+//b.ts
+import {prop1,func1,Clazz1} from &quot;./a&quot;;
+console.log(prop1);
+func1();
+new Clazz1{
+
+}
+export function func3{
+
+}
+</code></pre><h3 id="注解-annotation"><a href="#注解-annotation" class="headerlink" title="注解(annotation)"></a>注解(annotation)</h3><p>注解为程序的元素(类，方法，变量)加上更直观更明了的说明，这些说明信息与程序的业务逻辑无关，而是供指定的工具或框架使用的</p>
+<h3 id="类型定义文件-d-ts"><a href="#类型定义文件-d-ts" class="headerlink" title="类型定义文件(*.d.ts)"></a>类型定义文件(*.d.ts)</h3><p>类型定义文件用来帮助开发者在Typescript中使用已有的javascript的工具包，如jquery</p>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/04/26/Typescript笔记2/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-Typescript笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
