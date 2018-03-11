@@ -170,6 +170,110 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-hexo搭建blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/07/hexo搭建blog/">hexo搭建blog</a>
+    </h1>
+  
+
+        
+        <a href="/2018/03/07/hexo搭建blog/" class="archive-article-date">
+  	<time datetime="2018-03-07T04:41:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="系统环境配置"><a href="#系统环境配置" class="headerlink" title="系统环境配置"></a>系统环境配置</h2><p>要使用Hexo，需要在你的系统中支持Nodejs以及Git，如果还没有，那就开始安装吧！<br>1.<a href="https://nodejs.org/download/" target="_blank" rel="external">下载Node.js</a><br>2.<a href="http://www.w3cschool.cc/nodejs/nodejs-install-setup.html" target="_blank" rel="external">安装Node.js</a><br>3.<a href="http://git-scm.com/download/" target="_blank" rel="external">安装git</a></p>
+<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>1.在d盘新建一个hexo文件夹<br>2.输入命令<br><code>$ cd d:/hexo</code><br><code>$ npm install hexo-cli -g</code><br><code>$ hexo init blog</code><br><code>$ cd blog</code><br><code>$ npm install</code><br><code>$ hexo g # 或者hexo generate</code><br><code>$ hexo s # 或者hexo server，可以在http://localhost:4000/ 查看</code><br>  现在我们打开 <code>http://localhost:4000/</code>  已经可以看到一篇内置的blog了。</p>
+<hr>
+<p>  常用的hexo命令如下：<br> <code>hexo generate (hexo g)</code> 生成静态文件，会在当前目录下生成一个新的叫做public的文件夹<br>  <code>hexo server (hexo s)</code>  启动本地web服务，用于博客的预览<br>  <code>hexo deploy (hexo d)</code>  部署播客到远端（比如github, heroku等平台）<br>  <code>hexo new &quot;postName&quot;</code> 新建文章<br>  <code>hexo new page &quot;pageName&quot;</code> 新建页面<br>  常见简写如下：<br> <code>$ hexo n == hexo new</code><br> <code>$ hexo g == hexo generate</code><br> <code>$ hexo s == hexo server</code><br> <code>$ hexo d == hexo deploy</code></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/03/07/hexo搭建blog/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-前端面试题2017" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/05/前端面试题2017/">前端面试题2018</a>
+    </h1>
+  
+
+        
+        <a href="/2018/03/05/前端面试题2017/" class="archive-article-date">
+  	<time datetime="2018-03-05T12:59:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/03/05/前端面试题2017/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-Typescript笔记2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -207,45 +311,52 @@ p2.eat();
 </code></pre><h4 id="类的访问控制符"><a href="#类的访问控制符" class="headerlink" title="类的访问控制符"></a>类的访问控制符</h4><ul>
 <li>public   公有的  在类的内部外部可以访问  默认值</li>
 <li>private  私有的  在类的内部可以访问</li>
-<li><p>protected  受保护的  在类的内部和子类可以访问到</p>
-<h4 id="类的构造函数"><a href="#类的构造函数" class="headerlink" title="类的构造函数"></a>类的构造函数</h4><p>  class Person{</p>
-<pre><code>constructor(public name:string){
+<li>protected  受保护的  在类的内部和子类可以访问到  </li>
+</ul>
+<h4 id="类的构造函数"><a href="#类的构造函数" class="headerlink" title="类的构造函数"></a>类的构造函数</h4><pre><code>class Person1{
+  constructor(public name:string){
 
+  }
+  eat(){
+    console.log(this.name);
+  }
 }
-eat(){
-  console.log(this.name);
+var p1 = new Person1(&quot;batman&quot;); 
+p1.eat();    //batman
+</code></pre><p>在构造函数里面加入public才是声明name属性，eat方法才能调用  </p>
+<h4 id="类的继承"><a href="#类的继承" class="headerlink" title="类的继承"></a>类的继承</h4><p> 集成的语法：extends super</p>
+<pre><code>class Person{
+  constructor(public name:string){
+    console.log(&quot;haha&quot;);
+  }
+  eat(){
+    console.log(&quot;i&apos;m eating&quot;);
+  }
 }
-</code></pre><p>  }<br>  var p1 = new Person(“batman”);<br>  p1.eat();    //batman<br>在构造函数里面加入public才是声明name属性，eat方法才能调用</p>
-<h4 id="类的继承"><a href="#类的继承" class="headerlink" title="类的继承"></a>类的继承</h4><p>extends super</p>
-<p>   class Person{</p>
-<pre><code>constructor(public name:string){
-  console.log(&quot;haha&quot;);
+class Employee extends Person{
+  constructor(name:string,code:string){
+    super(name);
+    console.log(&quot;xixi&quot;);
+    this.code = code;
+  }
+  code:string;
+  work(){
+    super.eat();
+    this.dowork()
+  }
+  private doWork(){
+    console.log(&quot;i&apos;m working&quot;);
+  }
 }
-eat(){
-  console.log(&quot;i&apos;m eating&quot;);
-}
-</code></pre><p>   }<br>   class Employee extends Person{</p>
-<pre><code>constructor(name:string,code:string){
-  super(name);
-  console.log(&quot;xixi&quot;);
-  this.code = code;
-}
-code:string;
-work(){
-  super.eat();
-  this.dowork()
-}
-private doWork(){
-  console.log(&quot;i&apos;m working&quot;);
-}
-</code></pre><p>   }<br>   var e1 = new Employee(“name”,”1”);<br>   e1.work();</p>
-<h3 id="泛型-generic"><a href="#泛型-generic" class="headerlink" title="泛型(generic)"></a>泛型(generic)</h3><p>参数化的类型，一般用来限制集合的内容 </p>
+var e1 = new Employee(&quot;name&quot;,&quot;1&quot;);
+e1.work();
+</code></pre><h3 id="泛型-generic"><a href="#泛型-generic" class="headerlink" title="泛型(generic)"></a>泛型(generic)</h3><p> 参数化的类型，一般用来限制集合的内容 </p>
 <pre><code>person同上例一样
 var works: Array&lt;Person&gt; = [];
 workers[0] = new Person(&quot;zhangsan&quot;);
 workers[1] = new Employee(&quot;lisi&quot;,2);
 worker[2] = 2;   // 报错，类型不符合
-</code></pre><h3 id="接口-Interface"><a href="#接口-Interface" class="headerlink" title="接口(Interface)"></a>接口(Interface)</h3><p>用来建立某种代码约定，使得其他开发者在调用某个方法或创建新的类时必须遵循接口所定义的代码约定</p>
+</code></pre><h3 id="接口-Interface"><a href="#接口-Interface" class="headerlink" title="接口(Interface)"></a>接口(Interface)</h3><p> 用来建立某种代码约定，使得其他开发者在调用某个方法或创建新的类时必须遵循接口所定义的代码约定</p>
 <pre><code>一.接口声明属性
 interface IPerson {
   name:string;
@@ -274,7 +385,7 @@ class Tiger implements Animal{
     console.log(&quot;I eat meat&quot;);
   }
 }
-</code></pre><h3 id="模块-Module"><a href="#模块-Module" class="headerlink" title="模块(Module)"></a>模块(Module)</h3><p>模块可以帮助开发者将代码分割为可重用的单元。开发者可以自己决定将模块中的哪些资源(类，方法，变量)暴露出去供外部使用，哪些资源只有模块内使用</p>
+</code></pre><h3 id="模块-Module"><a href="#模块-Module" class="headerlink" title="模块(Module)"></a>模块(Module)</h3><p> 模块可以帮助开发者将代码分割为可重用的单元。开发者可以自己决定将模块中的哪些资源(类，方法，变量)暴露出去供外部使用，哪些资源只有模块内使用</p>
 <pre><code>//a.ts
 export var prop1;
 var prop2;
@@ -300,13 +411,11 @@ func1();
 new Clazz1{
 
 }
-export function func3{
 
+export function func3{
 }
-</code></pre><h3 id="注解-annotation"><a href="#注解-annotation" class="headerlink" title="注解(annotation)"></a>注解(annotation)</h3><p>注解为程序的元素(类，方法，变量)加上更直观更明了的说明，这些说明信息与程序的业务逻辑无关，而是供指定的工具或框架使用的</p>
-<h3 id="类型定义文件-d-ts"><a href="#类型定义文件-d-ts" class="headerlink" title="类型定义文件(*.d.ts)"></a>类型定义文件(*.d.ts)</h3><p>类型定义文件用来帮助开发者在Typescript中使用已有的javascript的工具包，如jquery</p>
-</li>
-</ul>
+</code></pre><h3 id="注解-annotation"><a href="#注解-annotation" class="headerlink" title="注解(annotation)"></a>注解(annotation)</h3><p>  注解为程序的元素(类，方法，变量)加上更直观更明了的说明，这些说明信息与程序的业务逻辑无关，而是供指定的工具或框架使用的</p>
+<h3 id="类型定义文件-d-ts"><a href="#类型定义文件-d-ts" class="headerlink" title="类型定义文件(*.d.ts)"></a>类型定义文件(*.d.ts)</h3><p>  类型定义文件用来帮助开发者在Typescript中使用已有的javascript的工具包，如jquery</p>
 
       
 
@@ -452,7 +561,27 @@ while(price &gt; limitPrice){
    console.log(`the generator return ${price}`);
 }
 console.log(`buying at ${price}`);
-</code></pre><h3 id="析构表达式"><a href="#析构表达式" class="headerlink" title="析构表达式"></a>析构表达式</h3><p>  destruturing析构表达式:通过表达式将对象或数组拆解成任意数量的变<br>从对象里拆解变量<br>     function getStock(){<br>       return {<br>         code:”IBM”,<br>         price:{<br>           price1:200,<br>           price2:400<br>         },<br>         aaa:”xxx”,<br>         bbb:”haha”<br>       }<br>     }<br>     //js<br>     var stock = getStock();<br>     var code = stock.code;<br>     var price = stock.price;<br>     //ts<br>     var {code:codex,price: {price2}} = getStock();<br>     console.log(codex);   //IBM<br>     console.log(price2);   //400<br>从数组里拆解变量<br>     var array = [1,2,3,4];<br>     var [number1,number2,…others] = array1;<br>     console.log(number1);   1<br>     console.log(number2);   2<br>     console.log(others);  // [3,4]</p>
+</code></pre><h3 id="析构表达式"><a href="#析构表达式" class="headerlink" title="析构表达式"></a>析构表达式</h3><p>  destruturing析构表达式:通过表达式将对象或数组拆解成任意数量的变<br>从对象里拆解变量  </p>
+<pre><code>function getStock(){
+  return {
+    code:&quot;IBM&quot;,
+    price:{
+      price1:200,
+      price2:400
+    },
+    aaa:&quot;xxx&quot;,
+    bbb:&quot;haha&quot;
+  }
+}
+//js
+var stock = getStock();
+var code = stock.code;
+var price = stock.price;
+//ts
+var {code:codex,price: {price2}} = getStock();
+console.log(codex);   //IBM
+console.log(price2);   //400
+</code></pre><p>从数组里拆解变量<br>     var array = [1,2,3,4];<br>     var [number1,number2,…others] = array1;<br>     console.log(number1);   1<br>     console.log(number2);   2<br>     console.log(others);  // [3,4]   </p>
 <pre><code>function doSomething([number1,number2,...others]){
    console.log(number1);   
    console.log(number2);   
@@ -521,7 +650,7 @@ myArray.desc = &quot;four number&quot;;
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/18/正则表达式-1/">正则表达式;</a>
+      <a class="article-title" href="/2017/04/18/正则表达式-1/">正则表达式</a>
     </h1>
   
 
@@ -557,14 +686,16 @@ $           表示字符串的结束,跟^恰好相反
 <li><p>^        匹配字符串的开始</p>
 </li>
 <li><p>$        匹配字符串的结束</p>
-<h3 id="字符转义"><a href="#字符转义" class="headerlink" title="字符转义"></a>字符转义</h3><p>如果你想查找元字符本身的话，你不能直接指定它们，因为它们会被解释成别的意思，这时你就得使用\来取消这些字符的特殊意义。</p>
+<h3 id="字符转义"><a href="#字符转义" class="headerlink" title="字符转义"></a>字符转义</h3><p>如果你想查找元字符本身的话，你不能直接指定它们，因为它们会被解释成别的意思，这时你就得使用\来取消这些字符的特殊意义。  </p>
+</li>
+</ul>
 <pre><code>\             =&gt;   \\
 .             =&gt;   \.
 *             =&gt;   \*
 www.baidu.com =&gt;   www\.baidu\.com
-c:\Windows    =&gt;   c:\\Windows
+c:\Windows    =&gt;   c:\\Windows  
 </code></pre><h3 id="重复"><a href="#重复" class="headerlink" title="重复"></a>重复</h3><p>正如我们之前例子中提到的，{8}表示重复8次,以下还有几种表示重复的方式</p>
-</li>
+<ul>
 <li><ul>
 <li>重复零次或多次</li>
 </ul>
@@ -703,115 +834,6 @@ console.log(RegExp.multiline);    //false
 
 
   
-    <article id="post-article-title" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/23/article-title/">article title</a>
-    </h1>
-  
-
-        
-        <a href="/2017/03/23/article-title/" class="archive-article-date">
-  	<time datetime="2017-03-23T14:58:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-23</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/23/article-title/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/23/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2017/03/23/hello-world/" class="archive-article-date">
-  	<time datetime="2017-03-23T05:05:31.241Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-23</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/23/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
   
 
 
@@ -822,7 +844,7 @@ console.log(RegExp.multiline);    //false
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2017 hypin
+    		&copy; 2018 hypin
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten

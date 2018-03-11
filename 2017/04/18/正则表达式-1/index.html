@@ -6,21 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>正则表达式; | 前端小海</title>
+  <title>正则表达式 | 前端小海</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="之前学过正则表达式，但是在实际的开发中没有经常用导致又忘记了，所以将正则表达式相关的知识记录下来作为自己日常工作中使用的语法参考手册，同时让刚接触正则表达式的同学能快速入门。
 快速入门什么是正则表达式在js开发中，我们经常要对符合某些特殊规则的字符进行查询或匹配，正则表达式就是用来描述这些规则的，常见的使用场景是表单验证，查询字符等。
 简单例子/^1[3|5|8|4][0-9]\d{8}$/  /">
 <meta property="og:type" content="article">
-<meta property="og:title" content="正则表达式;">
+<meta property="og:title" content="正则表达式">
 <meta property="og:url" content="http://yoursite.com/2017/04/18/正则表达式-1/index.html">
 <meta property="og:site_name" content="前端小海">
 <meta property="og:description" content="之前学过正则表达式，但是在实际的开发中没有经常用导致又忘记了，所以将正则表达式相关的知识记录下来作为自己日常工作中使用的语法参考手册，同时让刚接触正则表达式的同学能快速入门。
 快速入门什么是正则表达式在js开发中，我们经常要对符合某些特殊规则的字符进行查询或匹配，正则表达式就是用来描述这些规则的，常见的使用场景是表单验证，查询字符等。
 简单例子/^1[3|5|8|4][0-9]\d{8}$/  /">
-<meta property="og:updated_time" content="2017-04-17T23:13:39.065Z">
+<meta property="og:updated_time" content="2018-03-11T12:10:03.040Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="正则表达式;">
+<meta name="twitter:title" content="正则表达式">
 <meta name="twitter:description" content="之前学过正则表达式，但是在实际的开发中没有经常用导致又忘记了，所以将正则表达式相关的知识记录下来作为自己日常工作中使用的语法参考手册，同时让刚接触正则表达式的同学能快速入门。
 快速入门什么是正则表达式在js开发中，我们经常要对符合某些特殊规则的字符进行查询或匹配，正则表达式就是用来描述这些规则的，常见的使用场景是表单验证，查询字符等。
 简单例子/^1[3|5|8|4][0-9]\d{8}$/  /">
@@ -182,7 +182,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      正则表达式;
+      正则表达式
     </h1>
   
 
@@ -218,14 +218,16 @@ $           表示字符串的结束,跟^恰好相反
 <li><p>^        匹配字符串的开始</p>
 </li>
 <li><p>$        匹配字符串的结束</p>
-<h3 id="字符转义"><a href="#字符转义" class="headerlink" title="字符转义"></a>字符转义</h3><p>如果你想查找元字符本身的话，你不能直接指定它们，因为它们会被解释成别的意思，这时你就得使用\来取消这些字符的特殊意义。</p>
+<h3 id="字符转义"><a href="#字符转义" class="headerlink" title="字符转义"></a>字符转义</h3><p>如果你想查找元字符本身的话，你不能直接指定它们，因为它们会被解释成别的意思，这时你就得使用\来取消这些字符的特殊意义。  </p>
+</li>
+</ul>
 <pre><code>\             =&gt;   \\
 .             =&gt;   \.
 *             =&gt;   \*
 www.baidu.com =&gt;   www\.baidu\.com
-c:\Windows    =&gt;   c:\\Windows
+c:\Windows    =&gt;   c:\\Windows  
 </code></pre><h3 id="重复"><a href="#重复" class="headerlink" title="重复"></a>重复</h3><p>正如我们之前例子中提到的，{8}表示重复8次,以下还有几种表示重复的方式</p>
-</li>
+<ul>
 <li><ul>
 <li>重复零次或多次</li>
 </ul>
@@ -437,11 +439,6 @@ console.log(RegExp.multiline);    //false
     </a>
   
   
-    <a href="/2017/03/23/article-title/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">article title</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
 </nav>
 
 
@@ -452,7 +449,7 @@ console.log(RegExp.multiline);    //false
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="正则表达式-1" data-title="正则表达式;" data-url="http://yoursite.com/2017/04/18/正则表达式-1/"></div>
+	<div class="ds-thread" data-thread-key="正则表达式-1" data-title="正则表达式" data-url="http://yoursite.com/2017/04/18/正则表达式-1/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -481,7 +478,7 @@ console.log(RegExp.multiline);    //false
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2017 hypin
+    		&copy; 2018 hypin
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten

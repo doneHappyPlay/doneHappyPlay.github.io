@@ -28,7 +28,7 @@ var template = `&amp;lt;div&amp;gt;
                   &amp;lt;span&amp;gt;${myname}&amp;lt;/span&amp;gt;
                 &amp;lt;/div&amp;gt;`;
 自动拆分字符串function test(tem">
-<meta property="og:updated_time" content="2017-04-25T00:17:11.333Z">
+<meta property="og:updated_time" content="2018-03-11T12:12:28.040Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Typescript笔记">
 <meta name="twitter:description" content="字符串属性多行字符串`hello 
@@ -305,7 +305,27 @@ while(price &gt; limitPrice){
    console.log(`the generator return ${price}`);
 }
 console.log(`buying at ${price}`);
-</code></pre><h3 id="析构表达式"><a href="#析构表达式" class="headerlink" title="析构表达式"></a>析构表达式</h3><p>  destruturing析构表达式:通过表达式将对象或数组拆解成任意数量的变<br>从对象里拆解变量<br>     function getStock(){<br>       return {<br>         code:”IBM”,<br>         price:{<br>           price1:200,<br>           price2:400<br>         },<br>         aaa:”xxx”,<br>         bbb:”haha”<br>       }<br>     }<br>     //js<br>     var stock = getStock();<br>     var code = stock.code;<br>     var price = stock.price;<br>     //ts<br>     var {code:codex,price: {price2}} = getStock();<br>     console.log(codex);   //IBM<br>     console.log(price2);   //400<br>从数组里拆解变量<br>     var array = [1,2,3,4];<br>     var [number1,number2,…others] = array1;<br>     console.log(number1);   1<br>     console.log(number2);   2<br>     console.log(others);  // [3,4]</p>
+</code></pre><h3 id="析构表达式"><a href="#析构表达式" class="headerlink" title="析构表达式"></a>析构表达式</h3><p>  destruturing析构表达式:通过表达式将对象或数组拆解成任意数量的变<br>从对象里拆解变量  </p>
+<pre><code>function getStock(){
+  return {
+    code:&quot;IBM&quot;,
+    price:{
+      price1:200,
+      price2:400
+    },
+    aaa:&quot;xxx&quot;,
+    bbb:&quot;haha&quot;
+  }
+}
+//js
+var stock = getStock();
+var code = stock.code;
+var price = stock.price;
+//ts
+var {code:codex,price: {price2}} = getStock();
+console.log(codex);   //IBM
+console.log(price2);   //400
+</code></pre><p>从数组里拆解变量<br>     var array = [1,2,3,4];<br>     var [number1,number2,…others] = array1;<br>     console.log(number1);   1<br>     console.log(number2);   2<br>     console.log(others);  // [3,4]   </p>
 <pre><code>function doSomething([number1,number2,...others]){
    console.log(number1);   
    console.log(number2);   
@@ -441,7 +461,7 @@ myArray.desc = &quot;four number&quot;;
   
   
     <a href="/2017/04/18/正则表达式-1/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">正则表达式;</div>
+      <div class="article-nav-title">正则表达式</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -484,7 +504,7 @@ myArray.desc = &quot;four number&quot;;
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2017 hypin
+    		&copy; 2018 hypin
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
